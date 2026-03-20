@@ -15,7 +15,7 @@ load_dotenv()
 # 設定 Google Gemini
 google_api_key = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=google_api_key)
-model = genai.GenerativeModel('gemini-2-flash') # 修正了引號錯誤
+model = genai.GenerativeModel('gemini-2.5-flash') # 修正了引號錯誤
 
 # 在 genai.configure 之後加入這段
 print("--- 正在查詢可用模型清單 ---")
