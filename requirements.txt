@@ -1,4 +1,11 @@
-flask
+Flask
+google-ai-generativelanguage
+google-api-core
+google-auth
+google-generativeai
+googleapis-common-protos
+gunicorn
+requests
 slack_sdk
-google-generativeai>=0.8.6
+colorama
 python-dotenv
