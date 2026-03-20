@@ -15,17 +15,7 @@ load_dotenv()
 # 設定 Google Gemini
 google_api_key = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=google_api_key)
-model = genai.GenerativeModel('gemini-2.5-flash') # 修正了引號錯誤
-
-# 在 genai.configure 之後加入這段
-print("--- 正在查詢可用模型清單 ---")
-try:
-    for m in genai.list_models():
-        if 'generateContent' in m.supported_generation_methods:
-            print(f"可用模型: {m.name}")
-except Exception as e:
-    print(f"查詢失敗: {str(e)}")
-print("--- 查詢結束 ---")
+model = genai.GenerativeModel('gemini-flash-latest') # 修正了引號錯誤
 
 # 初始化 Slack Web Client
 slack_token = os.getenv('SLACK_BOT_TOKEN')
